@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brainrot Quiz - Italian Brainrot</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFGMZ0M8WX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZFGMZ0M8WX');
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <div class="logo-flag">
+        <span class="flag green"></span><span class="flag white"></span><span class="flag red"></span>
+      </div>
+      <div class="logo-text">
+        <span class="site-title">italian brainrot</span>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="text.html">Text Generator</a>
+      <a href="index.html">Image Generator</a>
+      <a href="voice.html">Voice Synth</a>
+      <a href="quiz.html" class="active">Brainrot Quiz</a>
+    </nav>
+    <div class="lang-switch">
+      <button id="lang-en" class="active">EN</button>
+      <button id="lang-it">IT</button>
+    </div>
+  </header>
+  <main>
+    <h1 id="main-title">Italian Brainrot Quiz</h1>
+    <p id="main-desc">Test your Italian meme knowledge! Choose the right answer and see how much brainrot you have.</p>
+    <div class="quiz-box">
+      <div id="quiz-container"></div>
+      <button id="next-question-btn" style="display:none;">Next</button>
+      <div id="score" style="margin-top:20px;"></div>
+    </div>
+  </main>
+  <footer>
+    <p id="footer-text">italian brainrot</p>
+  </footer>
+  <script src="quiz.js"></script>
+</body>
+</html> 
