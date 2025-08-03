@@ -72,6 +72,25 @@
     <h1 id="main-title">Italian Brainrot Image Generator</h1>
     <p id="main-desc">Upload your photo and let the Italian meme magic happen! Add pizza, 🍕🤌, and Renaissance vibes to any image.</p>
     
+    <!-- Hero Section with Image Generator -->
+    <div class="hero-generator" style="max-width: 700px; margin: 40px auto; background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%); border-radius: 20px; box-shadow: 0 8px 32px rgba(0,140,69,0.1); padding: 32px; border: 2px solid #008C45;">
+      <h2 style="color: #CD212A; margin-bottom: 20px; text-align: center; font-family: 'Permanent Marker', cursive; font-size: 1.8rem;">🎨 Transform Your Images with Italian Magic</h2>
+      <div class="input-box">
+        <textarea id="img-prompt" class="styled-input" placeholder="Describe your Italian brainrot vision..." style="min-height: 120px; font-size: 1.1rem;"></textarea>
+        <div class="input-actions">
+          <label class="upload-btn" for="upload" style="font-size: 1.1rem; padding: 12px 24px;"><span class="icon">📤</span> Upload Image</label>
+          <input type="file" id="upload" accept="image/*" style="display:none;">
+          <button id="generate-img-btn" class="create-btn" style="font-size: 1.2rem; padding: 16px 32px;">🚀 Generate Italian Brainrot Image</button>
+        </div>
+      </div>
+      <canvas id="canvas" style="display:none;"></canvas>
+      <img id="result-img" alt="Your brainrotted image will appear here" style="max-width:100%;margin-top:24px;display:none;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
+      <div id="img-actions" style="display:none;margin-top:16px;">
+        <button id="download-btn" style="background: #008C45; color: white; border: none; border-radius: 8px; padding: 12px 24px; font-weight: bold; cursor: pointer; margin-right: 12px;">📥 Download</button>
+        <button id="reset-btn" style="background: #CD212A; color: white; border: none; border-radius: 8px; padding: 12px 24px; font-weight: bold; cursor: pointer;">🔄 Reset</button>
+      </div>
+    </div>
+    
     <!-- AI-Friendly Content Section -->
     <div class="ai-content-section" style="max-width: 800px; margin: 40px auto; text-align: left; background: #f8f9fa; padding: 24px; border-radius: 12px; border-left: 4px solid #008C45;">
       <h2 style="color: #CD212A; margin-bottom: 16px;">Transform Your Images with Italian Brainrot Magic</h2>
@@ -97,20 +116,6 @@
       <p style="line-height: 1.6;">
         Social media posts, TikTok videos, Instagram stories, funny profile pictures, meme creation, and any content that needs a touch of Italian humor and culture. Our generator is used by thousands of creators worldwide to create viral Italian Brainrot content.
       </p>
-    </div>
-    <div class="input-box">
-      <textarea id="img-prompt" class="styled-input" placeholder="Enter your imagination..."></textarea>
-      <div class="input-actions">
-        <label class="upload-btn" for="upload"><span class="icon">📤</span> Upload</label>
-        <input type="file" id="upload" accept="image/*" style="display:none;">
-        <button id="generate-img-btn" class="create-btn">Create</button>
-      </div>
-    </div>
-    <canvas id="canvas" style="display:none;"></canvas>
-    <img id="result-img" alt="Your brainrotted image will appear here" style="max-width:100%;margin-top:24px;display:none;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
-    <div id="img-actions" style="display:none;margin-top:16px;">
-      <button id="download-btn">Download</button>
-      <button id="reset-btn">Reset</button>
     </div>
   </main>
   <footer>
