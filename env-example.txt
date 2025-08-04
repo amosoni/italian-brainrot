@@ -1,0 +1,12 @@
+# Vercel环境变量配置
+# 在Vercel仪表板中添加以下环境变量
+
+# Replicate API Token (必需)
+REPLICATE_API_TOKEN=r8_HeYcj83efWvm7fBv1D2ua8JKHQE38yy0ASkfNmc39
+
+# 安全配置
+NODE_ENV=production
+
+# 其他可选配置
+# ANALYTICS_ID=your_analytics_id
+# SENTRY_DSN=your_sentry_dsn 

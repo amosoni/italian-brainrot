@@ -1,0 +1,29 @@
+<!-- 安全头信息配置 -->
+<!-- 在您的HTML文件的<head>部分添加以下meta标签 -->
+
+<!-- 内容安全策略 -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.replicate.com;">
+
+<!-- XSS保护 -->
+<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
+<!-- 防止点击劫持 -->
+<meta http-equiv="X-Frame-Options" content="DENY">
+
+<!-- 防止MIME类型嗅探 -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+<!-- 引用策略 -->
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+<!-- 权限策略 -->
+<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+<!-- 额外的安全建议 -->
+<!-- 
+1. 确保所有外部链接使用rel="noopener noreferrer"
+2. 移除任何不必要的第三方脚本
+3. 定期更新依赖包
+4. 使用HTTPS
+5. 监控网站访问日志
+--> 

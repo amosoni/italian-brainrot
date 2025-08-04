@@ -13,13 +13,67 @@ window.addEventListener('DOMContentLoaded', function() {
     return enBtn && enBtn.classList.contains('active') ? 'en' : 'it';
   }
 
-  document.getElementById('synth-btn').onclick = function() {
+  document.getElementById('generate-voice-btn').onclick = async function() {
     const text = document.getElementById('voice-input').value;
-    if (!text.trim()) return;
-    const resultBox = document.getElementById('voice-result-box');
-    const resultText = document.getElementById('voice-result-text');
-    resultText.textContent = text;
-    resultBox.style.display = 'block';
+    if (!text.trim()) {
+      alert(getCurrentLang() === 'it' ? 'Inserisci del testo!' : 'Please enter some text!');
+      return;
+    }
+    
+    const btn = document.getElementById('generate-voice-btn');
+    const originalText = btn.textContent;
+    btn.textContent = getCurrentLang() === 'it' ? 'Generando...' : 'Generating...';
+    btn.disabled = true;
+    
+    try {
+      const response = await fetch('/api/tts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ text: text.trim() })
+      });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      
+      if (data.audioUrl) {
+        const outputDiv = document.getElementById('voice-output');
+        outputDiv.innerHTML = `
+          <div style="margin-top: 16px; padding: 16px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #008C45;">
+            <h3 style="color: #CD212A; margin-bottom: 12px;">🎤 Generated Audio</h3>
+            <audio controls style="width: 100%; margin-bottom: 12px;">
+              <source src="${data.audioUrl}" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <button id="download-voice-btn" style="background: #008C45; color: white; border: none; border-radius: 8px; padding: 12px 24px; font-weight: bold; cursor: pointer;">📥 Download Audio</button>
+          </div>
+        `;
+        
+        // 添加下载功能
+        document.getElementById('download-voice-btn').onclick = function() {
+          const link = document.createElement('a');
+          link.href = data.audioUrl;
+          link.download = 'italian-brainrot-voice.mp3';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        };
+      } else {
+        throw new Error('No audio URL received');
+      }
+    } catch (error) {
+      console.error('Voice generation error:', error);
+      alert(getCurrentLang() === 'it' 
+        ? 'Errore nella generazione vocale. Riprova più tardi.' 
+        : 'Voice generation error. Please try again later.');
+    } finally {
+      btn.textContent = originalText;
+      btn.disabled = false;
+    }
   };
 
   document.getElementById('play-voice-btn').onclick = function() {
