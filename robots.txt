@@ -1,66 +1,57 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
 
-# AI Crawlers
 User-agent: GPTBot
 Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: BingPreview
-Allow: /
+Disallow: /admin/
+Disallow: /private/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /admin/
+Disallow: /private/
 
-User-agent: Applebot
+User-agent: Google-Extended
 Allow: /
-
-User-agent: Amazonbot
-Allow: /
-
-User-agent: BaiduSpider
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: Omgilibot
-Allow: /
+Disallow: /admin/
+Disallow: /private/
 
 User-agent: CCBot
 Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: LinkedInBot
-Allow: /
-
-# Sitemap
-Sitemap: https://www.italianbrainrot.today/sitemap.xml
-
-# Disallow unnecessary files
-Disallow: /node_modules/
-Disallow: /.git/
-Disallow: /package.json
-Disallow: /package-lock.json
-Disallow: /README.md
-Disallow: /cursorrules.md
-Disallow: /test.html
-Disallow: /temp/
 Disallow: /admin/
-Disallow: /private/ 
+Disallow: /private/
+
+User-agent: Omgilibot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: Applebot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: Bytespider
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: https://www.italianbrainrot.today/sitemap.xml 
