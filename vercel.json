@@ -1,4 +1,9 @@
 {
+  "functions": {
+    "api/tts.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
   "headers": [
     {
       "source": "/(.*)",
@@ -35,6 +40,6 @@
       "source": "/old",
       "destination": "/",
       "permanent": true
-        }
+    }
   ]
 } 

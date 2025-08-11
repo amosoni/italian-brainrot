@@ -1,7 +1,31 @@
 {
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "node-fetch": "^3.3.2"
+  "name": "italian-brainrot-generator",
+  "version": "1.1.0",
+  "description": "Generate meme-style Italian text with emoji and brainrot energy. Create viral Italian memes instantly!",
+  "main": "index.html",
+  "scripts": {
+    "dev": "echo 'Open index.html in your browser'",
+    "build": "echo 'No build step required for static site'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "italian",
+    "brainrot",
+    "meme",
+    "generator",
+    "text",
+    "image",
+    "voice",
+    "quiz"
+  ],
+  "author": "Italian Brainrot Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/italian-brainrot-generator.git"
+  },
+  "homepage": "https://www.italianbrainrot.today",
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

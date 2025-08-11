@@ -1,0 +1,122 @@
+/* Italian Brainrot Generator - CSS变量系统 */
+
+:root {
+  /* 主色调 - 意大利国旗色 */
+  --color-italy-green: #008C45;
+  --color-italy-white: #F4F5F0;
+  --color-italy-red: #CD212A;
+  
+  /* 辅助色 */
+  --color-primary: var(--color-italy-green);
+  --color-secondary: var(--color-italy-red);
+  --color-accent: #FFD700;
+  --color-warning: #FF6B35;
+  
+  /* 中性色 */
+  --color-text-primary: #222;
+  --color-text-secondary: #333;
+  --color-text-muted: #666;
+  --color-background: var(--color-italy-white);
+  --color-surface: #fff;
+  --color-border: #e0e0e0;
+  --color-shadow: rgba(0, 0, 0, 0.04);
+  
+  /* 字体系统 */
+  --font-family-primary: 'Roboto', 'Arial', sans-serif;
+  --font-family-display: 'Permanent Marker', 'Impact', cursive;
+  --font-family-mono: 'Courier New', monospace;
+  
+  /* 字体大小 */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+  
+  /* 行高 */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* 间距系统 */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+  
+  /* 圆角 */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-2xl: 20px;
+  --border-radius-full: 9999px;
+  
+  /* 阴影 */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-italy: 0 8px 32px rgba(0, 140, 69, 0.1);
+  
+  /* 过渡动画 */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* 布局 */
+  --container-max-width: 1200px;
+  --container-padding: 8vw;
+  --header-height: 80px;
+  
+  /* Z-index层级 */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+/* 深色模式支持 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #1a1a1a;
+    --color-surface: #2d2d2d;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #e0e0e0;
+    --color-text-muted: #a0a0a0;
+    --color-border: #404040;
+    --color-shadow: rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+  :root {
+    --color-primary: #006400;
+    --color-secondary: #8b0000;
+    --color-border: #000000;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.8);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.8);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.8);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* 减少动画模式支持 */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0s;
+    --transition-normal: 0s;
+    --transition-slow: 0s;
+  }
+} 
